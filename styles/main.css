@@ -1,0 +1,21 @@
+button.nav-link.active {
+  color: darkred !important;
+}
+.my-brand {
+  text-decoration: underline darkred;
+}
+.my-first-letter::first-letter {
+  -webkit-initial-letter: 2;
+  initial-letter: 2;
+  color: darkred;
+  font-weight: bold;
+  margin-right: 0.5em;
+  font-family: georgia;
+}
+.my-license {
+  color: darkred;
+}
+.my-toast-color {
+  background-color: darkred;
+  color: white;
+}
