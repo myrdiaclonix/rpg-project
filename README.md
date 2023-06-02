@@ -1,11 +1,15 @@
 # rpg-project
 
-Este é um projeto de auxílio às narrativas que crio. Ele utiliza conceitos básicos de HTML, CSS e JavaScript. Seu objetivo é arquivar ideias do cenário de RPG que mestro. Também é a ideia exercitar técnicas de software que aprendi até aqui (seria uma melhoria).
+Este é um projeto de auxílio às narrativas que crio. Ele utiliza conceitos básicos de HTML, CSS e JavaScript. Seu objetivo é arquivar ideias do cenário de RPG que mestro. Também é a ideia exercitar técnicas de software que aprendi até aqui.
 
 ### Tecnologias usadas
 
 - Bootstrap
 - jQuery
+
+### Design de Interface do Usuário (UI Design)
+
+O protótipo foi feito no Whimsical, podendo ser acessado por [este link](https://whimsical.com/rpg-project-MEBq4DPfL2zPxer88yoUcT). A ideia foi ajustar e balancear as informações que o site oferece e sua utilidade, não se mantendo apenas em algo estático.
 
 ### Como rodar o projeto (e.g.)
 

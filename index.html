@@ -29,105 +29,110 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="icon" type="image/x-icon" href="img/moons.svg" />
   </head>
-  <body class="d-flex flex-column h-100" onload="runToast()">
-    <header class="sticky-top">
-      <nav class="row navbar navbar-expand-lg bg-body-tertiary mx-0">
-        <div class="container-fluid px-0">
-          <span class="offset-1 navbar-brand mb-0 h1 my-brand"
-            >Taverna do Gish</span
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav mb-2 mb-lg-0" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="start-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#start-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="start-tab-pane"
-                  aria-selected="true"
-                >
-                  <i class="bi bi-fire"></i>
-                  Início
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="falone-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#falone-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="falone-tab-pane"
-                  aria-selected="true"
-                >
-                  <i class="bi bi-globe-americas"></i>
-                  Continente de Falone
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="about-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#about-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="about-tab-pane"
-                  aria-selected="true"
-                >
-                  <i class="bi bi-bookmark-check-fill"></i>
-                  Sobre
-                </button>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
+
+  <body class="d-flex flex-column h-100 w-100" onload="runToast()">
+    <header
+      class="bg-body-tertiary row justify-content-center sticky-top mx-0 w-100"
+    >
+      <div class="col-10 px-0">
+        <nav class="navbar navbar-expand-lg mx-0">
+          <div class="container-fluid px-0">
+            <span class="navbar-brand mb-0 pe-3 h1 my-brand"
+              >Taverna do Gish</span
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse justify-content-end navbar-collapse w-100"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav w-100" role="tablist">
+                <div class="row w-100">
+                  <div class="col-auto">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="start-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#start-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="start-tab-pane"
+                        aria-selected="true"
+                      >
+                        Início
+                      </button>
+                    </li>
+                  </div>
+                  <div class="col-auto">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="falone-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#falone-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="falone-tab-pane"
+                        aria-selected="true"
+                      >
+                        Falone
+                      </button>
+                    </li>
+                  </div>
+                  <div class="col-auto">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="workbench-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#workbench-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="workbench-tab-pane"
+                        aria-selected="true"
+                      >
+                        Bancada
+                      </button>
+                    </li>
+                  </div>
+                  <div class="col-auto ms-auto pe-0">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="about-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#about-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="about-tab-pane"
+                        aria-selected="true"
+                      >
+                        <i class="bi bi-bookmark-check-fill"></i>
+                        Sobre
+                      </button>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="w-100">
       <div class="row justify-content-center mx-0 py-3">
         <div class="col-10 px-0">
-          <div class="tab-content" id="myTabContent">
+          <div class="tab-content">
             <div
               class="tab-pane fade show active"
               id="start-tab-pane"
@@ -135,14 +140,24 @@
               aria-labelledby="start-tab"
               tabindex="0"
             >
-              <p class="my-first-letter">
-                Esta é a Taverna do Gish, boas vindas! Podem achar um lugar e se
-                sentar, que a apresentação dos bardos já vai começar. É nosso
-                costume contar histórias, então se tiver alguma basta erguer a
-                mão e nos impressionar, hehe. Temos atividades também: bozó,
-                copas, 21, batalhas de rima, concurso de música, hazard, corrida
-                de mesa e alguns outros.
-              </p>
+              <figure>
+                <blockquote class="blockquote">
+                  <p class="my-first-letter">
+                    Neste recinto de aconchegante atmosfera, boas vindas! Podem
+                    achar um lugar e se sentar, que a apresentação dos bardos já
+                    vai começar. É nosso costume contar histórias, então se
+                    tiver alguma basta erguer a mão e nos impressionar, hehe.
+                    Temos atividades também: bozó, copas, 21, batalhas de rima,
+                    concurso de música, hazard, corrida de mesa e alguns outros.
+                    Veio do frio, não? Que tal uma sopinha com queijo de búfala?
+                    Temos batata recheada também!
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Aspecto Svadhisthana, na Taverna do Gish, em Kramir
+                </figcaption>
+              </figure>
+
               <p>
                 Quam viverra orci sagittis eu. In mollis nunc sed id semper
                 risus in hendrerit. Feugiat vivamus at augue eget arcu dictum
@@ -178,7 +193,8 @@
                 É senso comum na academia afirmar que o gish mais talentoso e
                 poderoso foi Isten. Ele data de cerca de 10.000 anos atrás, e
                 foi um personagem que causou muitas polêmicas, ao contrário de
-                seus irmãos.
+                seus irmãos. Mas essa é apenas uma história, das muitas que
+                Falone possui.
               </p>
               <p>
                 Dictumst quisque sagittis purus sit amet volutpat consequat.
@@ -228,6 +244,55 @@
                 aliquet nibh praesent tristique magna sit.
               </p>
             </article>
+            <article
+              class="tab-pane fade"
+              id="workbench-tab-pane"
+              role="tabpanel"
+              aria-labelledby="workbench-tab"
+              tabindex="0"
+            >
+              <h4 class="text-center">Dice Roller</h4>
+
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="input-dice"
+                  class="form-control my-input-font"
+                  placeholder="Comando"
+                  aria-label="Comando"
+                  aria-describedby="basic-addon1"
+                />
+                <button
+                  class="btn btn-outline-secondary my-btn-color"
+                  type="button"
+                  id="roll-btn"
+                >
+                  Rolar
+                </button>
+              </div>
+              <div class="form-text mb-3" id="basic-addon1">
+                Exemplo: <samp>1d12+3d6+4</samp>
+              </div>
+              <input
+                type="text"
+                id="dice-result"
+                value=""
+                class="form-control mb-3 my-input-font"
+                placeholder="Resultado"
+                disabled
+              />
+
+              <p>
+                O <strong>Dice Roller</strong> é uma funcionalidade que, dado um
+                comando, executa e retorna um valor. O comando é uma soma de
+                elementos, onde cada elemento ou é um inteiro, ou é um dado. O
+                dado é escrito na forma <samp>"xdn"</samp>, onde
+                <samp>x</samp> é o número de dados e <samp>n</samp> é quantos
+                lados o dado tem. Assim, o comando
+                <samp>"1d6+2d8+2"</samp> significa rolar 1 dado de 6 lados, dois
+                de 8 lados e adicionar uma constante 2.
+              </p>
+            </article>
             <div
               class="tab-pane fade"
               id="about-tab-pane"
@@ -235,22 +300,19 @@
               aria-labelledby="about-tab"
               tabindex="0"
             >
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Vulputate ut pharetra sit amet aliquam id. Elit sed vulputate mi
-                sit amet mauris commodo quis imperdiet. Volutpat lacus laoreet
-                non curabitur gravida arcu. Tellus at urna condimentum mattis
-                pellentesque id. Nisi porta lorem mollis aliquam ut porttitor
-                leo. Enim blandit volutpat maecenas volutpat blandit aliquam
-                etiam erat velit. Semper risus in hendrerit gravida rutrum
-                quisque non. Cras adipiscing enim eu turpis. Ipsum consequat
-                nisl vel pretium lectus quam id leo. Viverra suspendisse potenti
-                nullam ac tortor vitae. Aliquam etiam erat velit scelerisque in
-                dictum non. Nam libero justo laoreet sit amet cursus sit amet
-                dictum. Feugiat in ante metus dictum at tempor commodo
-                ullamcorper a.
+              <p class="my-first-letter">
+                Se você ainda não descolbriu qual é a desse site, não se
+                preocupe, pode ser confuso realmente. O RPG de mesa é um tipo de
+                jogo onde pessoas se juntam em volta de uma mesa e interpretam
+                personagens. Existem dois tipos de jogadores, o
+                <strong>DM</strong> e o <strong>PJ</strong>.
               </p>
+              <ul class="list-unstyled">
+                <li>
+                  DM: significa Dungeon Master, ou Mestre da Masmorra. Ele é
+                  responsável por contar sobre o mundo em que os PJs estão.
+                </li>
+              </ul>
             </div>
           </div>
           <p>
@@ -272,7 +334,7 @@
     </main>
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
       <div
-        id="myToast"
+        id="my-toast"
         class="toast align-items-center my-toast-color border-0"
         role="alert"
         aria-live="assertive"
@@ -296,7 +358,7 @@
       <div class="row align-items-center">
         <div class="col">
           <p>
-            &copy; <span id="currentYear"></span> Jorge Luis Freitas Costa.
+            &copy; <span id="current-year"></span> Jorge Luis Freitas Costa.
             Licenciado sob a
             <a
               class="my-license"

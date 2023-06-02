@@ -4,6 +4,10 @@ button.nav-link.active {
 .my-brand {
   text-decoration: underline darkred;
 }
+.my-btn-color:hover {
+  background-color: darkred;
+  border: 1px solid darkred !important;
+}
 .my-first-letter::first-letter {
   -webkit-initial-letter: 2;
   initial-letter: 2;
@@ -18,4 +22,7 @@ button.nav-link.active {
 .my-toast-color {
   background-color: darkred;
   color: white;
+}
+.my-input-font {
+  font-family: monospace;
 }
