@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Possíveis experimentações com RPG de mesa. Com muito carinho." />
+    <meta name="keywords" content="rpg, dado, d20, história, html, css, javascript, projeto, narrativa, aventura, medieval, magia, batalha" />
+    <meta name="author" content="myrdiaclonix" />
+    <meta name="robots" content="index, nofollow" />
+
+    <title>Ficha de Personagem</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/character.svg" />
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row justify-content-center">
+            <div class="col text-center mb-3">
+                <h1>Ficha de Personagem - D&D 5ª Edição</h1>
+            </div>
+        </div>
+        <form class="row g-3" name="characterSheet">
+            <div class="col-lg-6">
+                <label for="name" class="form-label">Nome do Personagem</label>
+                <input type="text" class="form-control form-control-sm" id="name">
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="charClass" class="form-label">Classe & Nível</label>
+                <input type="text" class="form-control form-control-sm" id="charClass">
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="background" class="form-label">Antecende</label>
+                <input type="text" class="form-control form-control-sm" id="background">
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="player" class="form-label">Nome do Jogador</label>
+                <input type="text" class="form-control form-control-sm" id="player">
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="race" class="form-label">Raça</label>
+                <input type="text" class="form-control form-control-sm" id="race">
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="alignment" class="form-label">Alinhamento</label>
+                <input type="text" class="form-control form-control-sm" id="alignment">
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="exp" class="form-label">Pontos de Experiência</label>
+                <input type="text" class="form-control form-control-sm" id="exp">
+            </div>
+
+            <!-- Atributos -->
+            <div class="col-4 col-lg-2">
+                <label for="strValue" class="form-label">Força</label>
+                <input type="number" class="form-control form-control-sm" id="strValue">
+            </div>
+            <div class="col-4 col-lg-2">
+                <label for="dexValue" class="form-label">Destreza</label>
+                <input type="number" class="form-control form-control-sm" id="dexValue">
+            </div>
+            <div class="col-4 col-lg-2">
+                <label for="conValue" class="form-label">Constituição</label>
+                <input type="number" class="form-control form-control-sm" id="conValue">
+            </div>
+            <div class="col-4 col-lg-2">
+                <label for="intValue" class="form-label">Inteligência</label>
+                <input type="number" class="form-control form-control-sm" id="intValue">
+            </div>
+            <div class="col-4 col-lg-2">
+                <label for="wisValue" class="form-label">Sabedoria</label>
+                <input type="number" class="form-control form-control-sm" id="wisValue">
+            </div>
+            <div class="col-4 col-lg-2">
+                <label for="chaValue" class="form-label">Carisma</label>
+                <input type="number" class="form-control form-control-sm" id="chaValue">
+            </div>
+
+            <div class="col-xl-4">
+                <div class="row">
+                    <div class="col-6 d-flex flex-column justify-content-between">
+                        <button type="button" class="btn w-100" data-bs-toggle="button">Inspiração</button>
+
+                        <div>
+                            <label for="proficiencyBonus" class="form-label text-center w-100">Bônus de Proficiência</label>
+                            <input type="number" class="form-control form-control-sm" id="proficiencyBonus">
+                        </div>
+
+                        <div>
+                            <label for="passivePerc" class="form-label text-center w-100">Sabedoria Passiva (Percepção)</label>
+                            <input type="number" class="form-control form-control-sm" id="passivePerc">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header text-center">Salvaguardas</div>
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="strSave">
+                                    <label class="form-check-label" for="strSave">
+                                        Força
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="dexSave">
+                                    <label class="form-check-label" for="dexSave">
+                                        Destreza
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="conSave">
+                                    <label class="form-check-label" for="conSave">
+                                        Constituição
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="intSave">
+                                    <label class="form-check-label" for="intSave">
+                                        Inteligência
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="wisSave">
+                                    <label class="form-check-label" for="wisSave">
+                                        Sabedoria
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="chaSave">
+                                    <label class="form-check-label" for="chaSave">
+                                        Carisma
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perícias -->
+            <div class="col-xl-8">
+                <div class="card">
+                    <div class="card-header text-center">Perícias</div>
+                    <div class="card-body row">
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="acroSkill">
+                                <label class="form-check-label" for="acroSkill">
+                                    Acrobacia <small class="text-body-secondary">(Des)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="arcaSkill">
+                                <label class="form-check-label" for="arcaSkill">
+                                    Arcanismo <small class="text-body-secondary">(Int)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="athlSkill">
+                                <label class="form-check-label" for="athlSkill">
+                                    Atletismo <small class="text-body-secondary">(For)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="perfSkill">
+                                <label class="form-check-label" for="perfSkill">
+                                    Atuação <small class="text-body-secondary">(Car)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="deceSkill">
+                                <label class="form-check-label" for="deceSkill">
+                                    Enganação <small class="text-body-secondary">(Car)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="steaSkill">
+                                <label class="form-check-label" for="steaSkill">
+                                    Furtividade <small class="text-body-secondary">(Des)</small>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="histSkill">
+                                <label class="form-check-label" for="histSkill">
+                                    História <small class="text-body-secondary">(Int)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="intiSkill">
+                                <label class="form-check-label" for="intiSkill">
+                                    Intimidação <small class="text-body-secondary">(Car)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="insiSkill">
+                                <label class="form-check-label" for="insiSkill">
+                                    Intuição <small class="text-body-secondary">(Sab)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="inveSkill">
+                                <label class="form-check-label" for="inveSkill">
+                                    Investigação <small class="text-body-secondary">(Int)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="animSkill">
+                                <label class="form-check-label" for="animSkill">
+                                    Lidar com Animais <small class="text-body-secondary">(Sab)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="mediSkill">
+                                <label class="form-check-label" for="mediSkill">
+                                    Medicina <small class="text-body-secondary">(Sab)</small>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="natuSkill">
+                                <label class="form-check-label" for="natuSkill">
+                                    Natureza <small class="text-body-secondary">(Int)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="percSkill">
+                                <label class="form-check-label" for="percSkill">
+                                    Percepção <small class="text-body-secondary">(Sab)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="persSkill">
+                                <label class="form-check-label" for="persSkill">
+                                    Persuasão <small class="text-body-secondary">(Car)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="sleiSkill">
+                                <label class="form-check-label" for="sleiSkill">
+                                    Prestidigitação <small class="text-body-secondary">(Des)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reliSkill">
+                                <label class="form-check-label" for="reliSkill">
+                                    Religião <small class="text-body-secondary">(Int)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="survSkill">
+                                <label class="form-check-label" for="survSkill">
+                                    Sobrevivência <small class="text-body-secondary">(Sab)</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda coluna -->
+            <div class="col-xl-6">
+                <div class="row g-3">
+                    <div class="col-sm-4">
+                        <label for="armorClass" class="form-label text-center w-100">Classe de Armadura</label>
+                        <input type="number" class="form-control form-control-sm" id="armorClass">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <label for="initiative" class="form-label text-center w-100">Iniciativa</label>
+                        <input type="number" class="form-control form-control-sm" id="initiative">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <label for="speed" class="form-label text-center w-100">Deslocamento <small class="text-body-secondary">(m)</small></label>
+                        <input type="number" class="form-control form-control-sm" id="speed">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="maxHP" placeholder="0">
+                            <label for="maxHP">Máximo de Pontos de Vida</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="tempHP" placeholder="0">
+                            <label for="tempHP">Pontos de Vida Temporários</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="currentHP" placeholder="0">
+                            <label for="currentHP">Pontos de Vida Atuais</label>
+                        </div>
+                    </div>
+
+                    <!-- Dado de Vida -->
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header text-center">Dado de Vida</div>
+                            <div class="card-body">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="totalHitDice" placeholder="0">
+                                    <label for="totalHitDice">Total</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="currentHitDice" placeholder="0">
+                                    <label for="currentHitDice">Atual</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Salvaguarda contra Morte -->
+                    <div class="col-sm-6">
+                        <div class="card h-100">
+                            <div class="card-header text-center">Salvaguarda contra Morte</div>
+                            <div class="card-body d-flex flex-column">
+                                <div>
+                                    <label for="successes" class="form-label">Sucessos</label>
+                                    <input type="range" class="form-range" min="0" max="3" value="0" id="successes">
+                                </div>
+                                <div class="mt-auto">
+                                    <label for="failures" class="form-label">Falhas</label>
+                                    <input type="range" class="form-range" min="0" max="3" value="0" id="failures">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="attacks" class="form-label text-center w-100">Ataques & Conjuração</label>
+                        <textarea class="form-control" id="attacks" rows="5"></textarea>
+                    </div>
+
+                    <!-- Equipamento -->
+                    <div class="col-sm-2 d-flex flex-column justify-content-between">
+                        <div class="form-floating mb-1">
+                            <input type="number" class="form-control" id="CP" placeholder="0">
+                            <label for="CP">PC</label>
+                        </div>
+                        <div class="form-floating mb-1">
+                            <input type="number" class="form-control" id="SP" placeholder="0">
+                            <label for="SP">PP</label>
+                        </div>
+                        <div class="form-floating mb-1">
+                            <input type="number" class="form-control" id="EP" placeholder="0">
+                            <label for="EP">PE</label>
+                        </div>
+                        <div class="form-floating mb-1">
+                            <input type="number" class="form-control" id="GP" placeholder="0">
+                            <label for="GP">PO</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="PP" placeholder="0">
+                            <label for="PP">PL</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <label for="equipment" class="form-label text-center w-100">Equipamento</label>
+                        <textarea class="form-control" id="equipment" rows="11"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terceira coluna -->
+            <div class="col-xl-6">
+                <label for="personalityTraits" class="form-label text-center w-100">Traços de Personalidade</label>
+                <textarea class="form-control mb-3" id="personalityTraits" rows="3"></textarea>
+
+                <label for="ideals" class="form-label text-center w-100">Ideais</label>
+                <textarea class="form-control mb-3" id="ideals" rows="3"></textarea>
+
+                <label for="bonds" class="form-label text-center w-100">Vínculos</label>
+                <textarea class="form-control mb-3" id="bonds" rows="3"></textarea>
+
+                <label for="flaws" class="form-label text-center w-100">Defeitos</label>
+                <textarea class="form-control mb-3" id="flaws" rows="3"></textarea>
+
+                <label for="feaTraits" class="form-label text-center w-100">Características & Traços</label>
+                <textarea class="form-control" id="feaTraits" rows="15"></textarea>
+            </div>
+        </form>
+        <p class="mb-3 mt-4 text-center"><strong>Exportar</strong> fará sua ficha ser salva no <em>local storage</em> (esse botão também salvará qualquer alteração que fizer em uma ficha já existente). <strong>Importar</strong> permite que você traga uma ficha salva no <em>local storage</em> para poder editar.</p>
+        <div class="d-grid gap-2 d-md-flex mt-3 justify-content-md-center">
+            <button class="btn btn-primary me-md-2" type="button" id="export">Exportar</button>
+            <button class="btn btn-primary" type="button" id="import" data-bs-toggle="modal" data-bs-target="#importModal">Importar</button>
+        </div>
+    </div>
+
+    <!-- Modal para exibir as fichas importadas -->
+    <div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="importModalLabel">Selecione uma ficha para importar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="charList"></form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="deleteChar">Excluir</button>
+                    <button type="button" class="btn btn-primary" id="showChar" data-bs-dismiss="modal">Exibir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/characterSheet.js"></script>
+</body>
+
+</html>
