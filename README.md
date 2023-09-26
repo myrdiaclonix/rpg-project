@@ -2,9 +2,10 @@
 
 Este é um projeto de auxílio às narrativas que crio. Ele utiliza conceitos básicos de HTML, CSS e JavaScript. Seu objetivo é arquivar ideias do cenário de RPG que mestro. Também é a ideia exercitar técnicas de software que aprendi até aqui.
 
-### Tecnologias usadas
+### Tecnologias usadas no projeto
 
 - Bootstrap
+- Conventional Commits
 - jQuery
 
 ### Design de Interface do Usuário (UI Design)
