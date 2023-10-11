@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 intValue: document.getElementById("intValue").value,
                 wisValue: document.getElementById("wisValue").value,
                 chaValue: document.getElementById("chaValue").value,
+                inspiration: document.getElementById("inspiration").classList.contains("active"),
                 proficiencyBonus: document.getElementById("proficiencyBonus").value,
                 passivePerc: document.getElementById("passivePerc").value,
                 strSave: document.getElementById("strSave").checked,
@@ -136,7 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     const element = document.getElementById(key);
                     if (element) {
                         if (element.type === "checkbox") element.checked = charData[key];
-                        else element.value = charData[key];
+                        else if (element.type !== "button") element.value = charData[key];
+                        else if (charData[key]) element.classList.add("active");
+                        else element.classList.remove("active");
                     }
                 }
             }
