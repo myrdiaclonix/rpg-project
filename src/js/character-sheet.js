@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    $("#current-year").text(new Date().getFullYear());
+
+    // Dark mode.
+    const savedTheme = sessionStorage.getItem('theme');
+    if (savedTheme) {
+        $('html').attr('data-bs-theme', savedTheme);
+        $('#darkModeSwitch').prop('checked', savedTheme === 'dark');
+    }
+    $('#darkModeSwitch').change(function () {
+        const isDarkMode = $(this).prop('checked');
+        $('html').attr('data-bs-theme', isDarkMode ? 'dark' : 'light');
+        sessionStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+    
     const exprBtn = $("#export");
     const charList = $("#charList");
     const showChar = $("#showChar");
@@ -23,6 +37,7 @@ $(document).ready(function () {
                 attacks: $("#attacks").val(),
                 background: $("#background").val(),
                 bonds: $("#bonds").val(),
+                cantrip: $("#cantrip").val(),
                 charClass: $("#charClass").val(),
                 chaSave: $("#chaSave").prop("checked"),
                 chaValue: $("#chaValue").val(),
@@ -50,6 +65,15 @@ $(document).ready(function () {
                 intSave: $("#intSave").prop("checked"),
                 intValue: $("#intValue").val(),
                 inveSkill: $("#inveSkill").prop("checked"),
+                magicLv1: $("#magicLv1").val(),
+                magicLv2: $("#magicLv2").val(),
+                magicLv3: $("#magicLv3").val(),
+                magicLv4: $("#magicLv4").val(),
+                magicLv5: $("#magicLv5").val(),
+                magicLv6: $("#magicLv6").val(),
+                magicLv7: $("#magicLv7").val(),
+                magicLv8: $("#magicLv8").val(),
+                magicLv9: $("#magicLv9").val(),
                 maxHP: $("#maxHP").val(),
                 mediSkill: $("#mediSkill").prop("checked"),
                 name: $("#name").val(),
@@ -61,6 +85,7 @@ $(document).ready(function () {
                 persSkill: $("#persSkill").prop("checked"),
                 player: $("#player").val(),
                 PP: $("#PP").val(),
+                proficiencies: $("#proficiencies").val(),
                 proficiencyBonus: $("#proficiencyBonus").val(),
                 race: $("#race").val(),
                 reliSkill: $("#reliSkill").prop("checked"),
